@@ -1,0 +1,64 @@
+[package]
+name = "hermes-sdk"
+version = "0.1.0-alpha.1"
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/hermes-marketplace/hermes-sdk"
+homepage = "https://github.com/hermes-marketplace/hermes-sdk"
+documentation = "https://docs.rs/hermes-sdk"
+readme = "README.md"
+description = "The most comprehensive Rust SDK for eBay marketplace APIs - 17 specialized clients with 86+ methods"
+keywords = ["ebay", "marketplace", "api", "sdk", "ecommerce"]
+categories = ["api-bindings", "web-programming"]
+
+# Make this crate standalone (not part of workspace)
+[workspace]
+
+[dependencies]
+# Core dependencies
+tokio = { version = "1.0", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+reqwest = { version = "0.12", features = ["json"] }
+anyhow = "1.0"
+thiserror = "2.0"
+tracing = "0.1"
+dotenvy = "0.15"
+base64 = "0.22"
+
+# eBay SDK dependencies - using version numbers for crates.io publication
+hermes-ebay-buy-browse = "0.1.0"
+hermes-ebay-buy-feed = "0.1.0"
+hermes-ebay-buy-marketing = "0.1.0"
+hermes-ebay-buy-offer = "0.1.0"
+hermes-ebay-buy-order = "0.1.0"
+hermes-ebay-sell-account = "0.1.0"
+hermes-ebay-sell-analytics = "0.1.0"
+hermes-ebay-sell-compliance = "0.1.0"
+hermes-ebay-sell-finances = "0.1.0"
+hermes-ebay-sell-fulfillment = "0.1.0"
+hermes-ebay-sell-inventory = "0.1.0"
+hermes-ebay-sell-logistics = "0.1.0"
+hermes-ebay-sell-metadata = "0.1.0"
+hermes-ebay-sell-negotiation = "0.1.0"
+hermes-ebay-sell-recommendation = "0.1.0"
+hermes-ebay-commerce-catalog = "0.1.0"
+hermes-ebay-commerce-identity = "0.1.0"
+hermes-ebay-commerce-taxonomy = "0.1.0"
+hermes-ebay-commerce-translationbeta = "0.1.0"
+
+# Etsy SDK (TODO: Enable when SDK is ready)
+# hermes-etsy = { path = "../etsy/etsy" }
+
+# Stripe SDK (TODO: Enable when SDK is ready)
+# hermes-stripe = { path = "../stripe/stripe" }
+
+[dev-dependencies]
+tokio-test = "0.4"
+tracing-subscriber = "0.3"
+
+[features]
+default = ["ebay", "etsy", "stripe"]
+ebay = []
+etsy = []
+stripe = []
