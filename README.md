@@ -4,7 +4,7 @@
 [![Documentation](https://docs.rs/hermes-sdk/badge.svg)](https://docs.rs/hermes-sdk)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**The most comprehensive Rust SDK for eBay marketplace APIs** - 17 specialized clients with 86+ methods for complete e-commerce automation.
+**The most comprehensive Rust Client for eBay marketplace APIs** - 17 specialized clients with 86+ methods for complete e-commerce automation.
 
 ## ✨ Features
 
@@ -13,7 +13,6 @@
 - 🔒 **Type-Safe** - Full Rust type safety with generated models
 - ⚡ **Performance** - Built-in timing instrumentation and optimization
 - 🔄 **OAuth Management** - Automatic token handling and renewal
-- 🌍 **Production Ready** - Enterprise-grade architecture
 - 📚 **Comprehensive Documentation** - Examples and guides included
 
 ## 🎯 API Coverage
